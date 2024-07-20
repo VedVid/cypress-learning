@@ -1,0 +1,176 @@
+body::before {
+	background: none;
+}
+
+.col-md-9 img {
+    max-width: 100%;
+    display: inline-block;
+    padding: 4px;
+    line-height: 1.428571429;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 3px auto 3px auto;
+}
+
+.mysmallicon {
+	display: inline-block;
+}
+
+.mysmallicon img:hover {
+	background:#31A5E7;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+.mysmallicon img:active {
+	background:#178ACC;
+}
+
+header { border-bottom: 1px solid #000; }
+header > h1 { display: inline-block; }
+
+#contact input {
+	width: 30%;
+    min-width:200px;
+	border:1px solid #ddd;
+	margin:0 121px 5px;
+	padding:10px;
+}
+
+#contact textarea {
+	height:200px;
+	max-width:100%;
+	width: 30%;
+    min-width:200px;
+	border:1px solid #ddd;
+    resize:none;
+	margin: 0 121px 5px;
+	padding:10px;
+}
+
+#contact button {
+	cursor:pointer;
+	width:30%;
+    min-width:200px;
+	border:none;
+	background:#31A5E7;
+	color:#f8f8f8;
+	margin:0 121px 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button:hover {
+	background:#178ACC;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button:active { 
+    background:#157CB7;
+}
+
+/* The work below, CSSBox, is released under the Creative Commons
+   Attribution-ShareAlike 4.0 license and is available on
+   https://github.com/TheLastProject/CSSBox. You are not required to add
+   additional credit to your website, just leave the above text in this file */
+div.cssbox {
+  display: inline-block;
+}
+
+/* transition changed for vedvid.github.io */
+span.cssbox_full {
+  z-index: 999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+span.cssbox_full img {
+  position: fixed;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  max-height: 90%;
+  max-width: 90%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px black;
+}
+
+a.cssbox_close,
+a.cssbox_prev,
+a.cssbox_next {
+  z-index: 999;
+  position: fixed;
+  text-decoration: none;
+  visibility: hidden;
+  color: white;
+  font-size: 36px;
+}
+
+/* Changed for vedvid.github.io */
+a.cssbox_close {
+  top: 10%;
+  right: 10%;
+}
+
+a.cssbox_close::after {
+  content: '\00d7';
+}
+
+a.cssbox_prev,
+a.cssbox_next {
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+/* Changed for vedvid.github.io */
+a.cssbox_prev {
+  left: 10%;
+}
+
+/* Changed for vedvid.github.io */
+a.cssbox_next {
+  right: 10%;
+}
+
+/* Added for vedvid.github.io */
+img.cssbox_thumb:hover {
+    background:#31A5E7;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+/* Added for vedvid.github.io */
+img.cssbox_thumb:active {
+    background:#178ACC;
+}
+
+a:target ~ a.cssbox_close,
+a:target ~ a.cssbox_prev,
+a:target ~ a.cssbox_next {
+  visibility: visible;
+}
+
+a:target > img.cssbox_thumb + span.cssbox_full {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+span.cssbox_full {
+  cursor: initial;
+}
+/* This is the end of CSSBox */

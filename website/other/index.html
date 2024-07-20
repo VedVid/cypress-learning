@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Other projects - Ved's Hub</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Ved's Hub</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li>
+                                <a href="../games/">Games</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Other projects</a>
+                            </li>
+                            <li>
+                                <a href="../contact/">Contact</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../games/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../contact/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#other-projects">Other projects</a></li>
+            <li><a href="#rawig">RAWIG</a></li>
+            <li><a href="#roguelikedev-does-the-complete-roguelike-tutorial">#RoguelikeDev does the Complete Roguelike Tutorial</a></li>
+            <li><a href="#cyrillic2polish">cyrillic2polish</a></li>
+            <li><a href="#bearlibterminal-pony">bearlibterminal-pony</a></li>
+            <li><a href="#microblog">Microblog</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="other-projects">Other projects</h2>
+<hr />
+
+<h3 id="rawig">RAWIG</h3>
+<p><span style="background-color:#F0BE14; color:white;">&nbsp;&nbsp;beta&nbsp;&nbsp;</span> <span style="background-color:#E52B50; color:white;">&nbsp;&nbsp;stalled&nbsp;&nbsp;</span> <span style="background-color:#00add8; color:white;">&nbsp;&nbsp;go&nbsp;&nbsp;</span></p>
+<p><em>RAWIG</em> stands for <em>Roguelike Architecture Written In Go</em>.</p>
+<p>For a long time, I was relying on libtcodpy with SDL as the roguelike backend. Later, I started to use an excellent BearLibTerminal library. Last year, I decided to write my own "roguelike architecture" - the goal was to create a universal roguelike template.<br />
+A developer needs to provide very own core mechanics and level generators. Everything else - rendering system, pathfinding and field-of-view algorithms, UI and menus - is already set up.
+RAWIG is easy to use, and almost dependency free - its rendering system relies on BearLibTerminal.<br />
+I used RAWIG to create About The Kid Who Stole The Relics Back, Rogue Robs Train, and Unnamed Broughlike.</p>
+<div class="mysmallicon">
+    <a href="https://github.com/VedVid/RAWIG"><img src="../img/gh.png"></a>
+</div>
+
+<h3 id="roguelikedev-does-the-complete-roguelike-tutorial">#RoguelikeDev does the Complete Roguelike Tutorial</h3>
+<p>It is the yearly event hosted by <a href="https://www.reddit.com/user/aaron_ds">aaron_ds</a> on <a href="https://www.reddit.com/r/roguelikedev/">/r/roguelikedev</a>.
+In 2017, I decided to participate, using Go programming language to follow the mentioned <a href="http://www.roguebasin.com/index.php?title=Complete_Roguelike_Tutorial,_using_python%2Blibtcod">tutorial</a> as close as possible. I even wrote some <a href="https://github.com/VedVid/roguelikedevDoesTheRoguelikeTutorial2017/wiki">write-ups</a>.</p>
+<div class="mysmallicon">
+    <a href="https://github.com/VedVid/roguelikedevDoesTheRoguelikeTutorial2017"><img src="../img/gh.png"></a>
+</div>
+
+<p><br /></p>
+<h3 id="cyrillic2polish">cyrillic2polish</h3>
+<p>Most of the available tools transcripts Cyrillic script to English. Even the Polish media started to use English forms some time ago. As a remedy, I decided to write a simple tool to transcript and transliterate Cyrillic to Latin alphabet, using simplified PN-ISO standard.</p>
+<div class="mysmallicon">
+    <a href="https://github.com/VedVid/cyrillic2polish"><img src="../img/gh.png"></a>
+</div>
+
+<p><br/></p>
+<h3 id="bearlibterminal-pony">bearlibterminal-pony</h3>
+<p>I had Pony programming language on my radar for a while already. It seems to provide nice guarantees without much burden, and has easy to use C FFI. Therefore, creating a simple wrapper for BearLibTerminal looks like a nice way to learn a bit more about Pony.</p>
+<div class="mysmallicon">
+    <a href="https://github.com/VedVid/bearlibterminal-pony"><img src="../img/gh.png"></a>
+</div>
+
+<p><br /></p>
+<h3 id="microblog">Microblog</h3>
+<p>I was following the excellent flask <a href="https://github.com/miguelgrinberg/microblog">tutorial</a> created by Miguel Grinberg.</p>
+<div class="mysmallicon">
+    <a href="https://github.com/VedVid/flask_megatutorial"><img src="../img/gh.png"></a>
+</div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Website built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
