@@ -13,6 +13,15 @@ describe('Checks navbar functionality', () => {
     })
   })
 
+  it("Searches for 'Search' button", () => {
+    // We won't check usability of search function there,
+    // we'll use journeys for that.
+    pages.forEach((page, _) => {
+      cy.visit(`https://localhost/${page}`)
+      cy.get('.navbar-right > :nth-child(1) > a').should('exist')
+    })
+  })
+
   describe('Checks if every page has "Home", "Games", "Other" and "Contact" buttons with correct links', () => {
     // Home page uses different style of links than the other pages.
     // It links pages directly, while the other pages first go to the parent directory,
