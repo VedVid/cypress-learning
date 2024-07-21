@@ -4,7 +4,7 @@ describe('Checks home page', () => {
   })
 
   it('"Home" button should be marked as active', () => {
-    cy.get('.navbar').get('.active').contains("Home").should("exist");
+    cy.get('.navbar').get('.active').contains('Home').should('exist')
   })
 
   it('Hyperlink to LinedIn should be valid', () => {
@@ -15,7 +15,7 @@ describe('Checks home page', () => {
     cy.get('[href="https://vedor.itch.io/"]')
   })
 
-  it("Hyperlink to GitHub should be valid", () => {
+  it('Hyperlink to GitHub should be valid', () => {
     cy.get('[href="https://github.com/VedVid"]')
   })
 })
