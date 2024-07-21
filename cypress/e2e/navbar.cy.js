@@ -50,4 +50,34 @@ describe('Checks navbar functionality', () => {
       })
     })
   })
+
+  describe("Checks if navigation buttons (Previous, Next) are working correctly for every page", () => {
+      // Naming is a bit messed up in the project:
+      // the "Previous" button has `rel="next"`, and
+      // the "Next" button has `rel="prev".
+    
+    it("Tests navigation buttons on home page", () => {
+      cy.visit('https://localhost');
+      cy.get('.navbar').get('[rel="next"]').parent().should('has.attr', 'class', 'disabled');
+      cy.get('.navbar').get('[rel="prev"]').should('has.attr', 'href', 'games/');
+    })
+
+    it('Tests navigation buttons on the "Games" page', () => {
+      cy.visit('https://localhost/games/');
+      cy.get('.navbar').get('[rel="next"]').should('has.attr', 'href', '..');
+      cy.get('.navbar').get('[rel="prev"]').should('has.attr', 'href', '../other/');
+    })
+
+    it('Tests navigation buttons on the "Other projects" page', () => {
+      cy.visit('https://localhost/other/');
+      cy.get('.navbar').get('[rel="next"]').should('has.attr', 'href', '../games/');
+      cy.get('.navbar').get('[rel="prev"]').should('has.attr', 'href', '../contact/');
+    })
+
+    it("Tests navigation buttons on 'Contact' page", () => {
+      cy.visit('https://localhost/contact/');
+      cy.get('.navbar').get('[rel="next"]').should('has.attr', 'href', '../other/');
+      cy.get('.navbar').get('[rel="prev"]').parent().should('has.attr', 'class', 'disabled');
+    })
+  })
 })
