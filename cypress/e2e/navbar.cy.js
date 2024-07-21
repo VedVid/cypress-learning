@@ -13,7 +13,7 @@ describe('Checks navbar functionality', () => {
     })
   })
 
-  describe.only('Checks if every page has "Home", "Games", "Other" and "Contact" buttons with correct links', () => {
+  describe('Checks if every page has "Home", "Games", "Other" and "Contact" buttons with correct links', () => {
     // Home page uses different style of links than the other pages.
     // It links pages directly, while the other pages first go to the parent directory,
     // and only from there navigate to the other pages.
