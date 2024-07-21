@@ -18,4 +18,10 @@ describe('Checks home page', () => {
   it('Hyperlink to GitHub should be valid', () => {
     cy.get('[href="https://github.com/VedVid"]')
   })
+
+  it('Photo should be displayed', () => {
+    cy.get('img').should(($img) => {
+      expect($img[0].naturalWidth).to.be.greaterThan(0)
+    })
+  })
 })
