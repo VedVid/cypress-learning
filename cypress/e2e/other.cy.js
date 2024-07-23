@@ -9,7 +9,19 @@ describe('Checks content of "Other projects" page', () => {
 
   it('Checks if every sidebar link is valid', () => {
     cy.get('.bs-sidebar > .nav').find('a').each((item) => {
-      cy.visit(`https://localhost/other/${item.attr('href')}`)
+      cy.get(`[href="${item.attr('href')}"]`).click()
+      cy.url().should('contain', `/other/${item.attr('href')}`)
+    })
+  })
+
+  it('Checks if active links are marked as such in the sidebar', () => {
+    cy.get('.bs-sidebar > .nav').find('a').each((item) => {
+      cy.get(`[href="${item.attr('href')}"]`).click()
+      let className = 'active'
+      if (item.text() === 'Other projects') {
+        className = 'main active'
+      }
+      cy.get(`[href="${item.attr('href')}"]`).parent().should('has.attr', 'class', className)
     })
   })
 })
