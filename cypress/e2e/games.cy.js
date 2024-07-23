@@ -9,7 +9,19 @@ describe('Checks content of Game page', () => {
 
   it('Checks if every sidebar link is valid', () => {
     cy.get('.bs-sidebar > .nav').find('a').each((item) => {
-      cy.visit(`https://localhost/games/${item.attr('href')}`)
+      cy.get(`[href="${item.attr('href')}"]`).click()
+      cy.url().should('contain', `/games/${item.attr('href')}`)
+    })
+  })
+
+  it('Checks if active links are marked as such in the sidebar', () => {
+    cy.get('.bs-sidebar > .nav').find('a').each((item) => {
+      cy.get(`[href="${item.attr('href')}"]`).click()
+      let className = 'active'
+      if (item.text() === 'Games') {
+        className = 'main active'
+      }
+      cy.get(`[href="${item.attr('href')}"]`).parent().should('has.attr', 'class', className)
     })
   })
 })
