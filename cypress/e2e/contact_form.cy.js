@@ -38,4 +38,50 @@ describe('template spec', () => {
       cy.get('[id="contact-submit"]').should('contain', 'Submit')
     })
   })
+
+  describe('Test contact form functionality', () => {
+    // Unfortunately, it seems that I can't listen to formcarry events here,
+    // and no plain info is being displayed on the website.
+    // Hence, I rely on the url. When email is shipped, user should be
+    // navigated to the formcarry website. If something went wrong, user
+    // stays on contact page.
+    it('Should not send email if name field is empty', () => {
+      cy.get('[name="yourname"]').should('have.value', '')
+      cy.get('[name="yourmail"]').type('me@example.com')
+      cy.get('[id="contact-submit"]').click()
+      cy.url().should('contain', 'localhost/contact/')
+    })
+
+    it('Should not send email if email field is empty', () => {
+      cy.get('[name="yourname"]').type('guy from the Internet')
+      cy.get('[name="yourmail"]').should('have.value', '')
+      cy.get('[id="contact-submit"]').click()
+      cy.url().should('contain', 'localhost/contact/')
+    })
+
+    // Maybe I could use regex here?
+    describe('Invalid email addresses', () => {
+      beforeEach(() => {
+        cy.get('[name="yourname"]').type('guy from the Internet')
+      })
+
+      it('Without content before [at]', () => {
+        cy.get('[name="yourmail"]').type('@example.com')
+        cy.get('[id="contact-submit"]').click()
+        cy.url().should('contain', 'localhost/contact/')
+      })
+
+      it('Without [at] sign at all', () => {
+        cy.get('[name="yourmail"]').type('meexample.com')
+        cy.get('[id="contact-submit"]').click()
+        cy.url().should('contain', 'localhost/contact/')
+      })
+
+      it('Without content after [at]', () => {
+        cy.get('[name="yourmail"]').type('me@')
+        cy.get('[id="contact-submit"]').click()
+        cy.url().should('contain', 'localhost/contact/')
+      })
+    })
+  })
 })
